@@ -1,0 +1,14 @@
+ion-header{
+    ion-toolbar{
+        --background:#00bf8f ;
+        font-family: 'Times New Roman', Times, serif;
+        letter-spacing: 2px;
+        font-size: 2rem !important;
+        color: white;
+        ion-title{
+            margin-top: 5px;
+            // font-size: 1.5rem !important;   
+
+        }
+    }
+}

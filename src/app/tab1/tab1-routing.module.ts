@@ -6,6 +6,10 @@ const routes: Routes = [
   {
     path: '',
     component: Tab1Page,
+  },
+  {
+    path: 'medicine-datails',
+    loadChildren: () => import('./medicine-datails/medicine-datails.module').then( m => m.MedicineDatailsPageModule)
   }
 ];
 

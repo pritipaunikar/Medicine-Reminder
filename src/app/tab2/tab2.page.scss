@@ -1,0 +1,50 @@
+ion-header{
+    ion-toolbar{
+        --background:#00bf8f;
+        font-family: 'Times New Roman', Times, serif;
+        // letter-spacing: 2px;
+        font-size: 2rem !important;
+        color: white;
+        ion-title{
+            margin-top: 5px;
+            font-size: 1.5rem !important;   
+            // 948E99
+        }
+    }
+}
+
+ion-content{
+    --background:#00bf8f ;
+    .abs{
+        margin-top: 20px;
+        font-family: 'Times New Roman', Times, serif;
+            
+    }
+}
+
+.card{
+    background: white;
+    margin-top: 5px;
+    border-top-right-radius: 38px;
+    border-top-left-radius: 38px;
+}
+
+.all-charts{
+    padding-top: 0;
+}
+.heading{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .h1{
+        font-size: 1.2rem;
+        font-weight: bold;
+        color: black;
+    }
+}
+
+
+.icon{
+    height: 20px;
+    width: 20px;
+}

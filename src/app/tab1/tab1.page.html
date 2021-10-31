@@ -1,17 +1,37 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Tab 1
-    </ion-title>
+<ion-header class="ion-no-border" mode="ios">
+  <ion-toolbar class="ion-padding">
+    <ion-title>  Medicine List</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 1</ion-title>
-    </ion-toolbar>
-  </ion-header>
 
-  <app-explore-container name="Tab 1 page"></app-explore-container>
+  <ion-card style="padding: 0%; border-radius: 20px; border-left: solid #00bf8f;"  *ngFor="let medicine of medicineList ; let i=index" (click)="openDetails(i)">
+    <ion-item lines="none">
+      <ion-row style="display: inherit">
+        <ion-col>
+            <ion-col size="10">
+              <ion-chip outline color="primary" style="float:right; height: 20px; font-size: 10px;">
+              <ion-icon name="notifications-outline"></ion-icon>
+                <ion-label>{{medicine.medicineTime}}</ion-label>
+              </ion-chip>
+            </ion-col>
+          <p class="m-0" style=" margin-top: 5px; font-size: 14px; color: rgb(31, 179, 238);margin-bottom: 0vh;text-transform: capitalize; ">
+            <strong>{{medicine.medicineName}}</strong>
+          </p>
+          <p class="m-0" class="card-text" style="margin-top: 5px; "><strong>Dose :</strong> {{medicine.medicineDose}}</p>
+          <p class="m-0" class="card-text" style="margin-top: -7px;"><strong>Days: </strong>{{medicine.medicineStartDay}} - {{medicine.medicineEndtDay}}</p>  
+          <p class="m-0" class="card-text" style="margin-top: -8px;"><strong>Time :</strong> {{medicine.medicineTime}}</p>
+          <p class="m-0" class="card-text" style="margin-top: -8px;"><strong>Color :</strong>{{medicine.medicineColor}}</p>
+        </ion-col>
+      </ion-row>
+
+    </ion-item>
+  </ion-card>
+
+  <ion-fab horizontal="end" vertical="bottom" slot="fixed" routerLink="/tabs/tab2">
+    <ion-fab-button color="success" > 
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
 </ion-content>

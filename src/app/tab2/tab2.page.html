@@ -1,17 +1,70 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Tab 2
-    </ion-title>
+<ion-header class="ion-no-border" mode="ios">
+  <ion-toolbar class="ion-padding">
+    <ion-icon name="chevron-back-outline" slot="start" routerLink="/tabs/tab1"></ion-icon>
+
+    <ion-title style="font-size: 14px;"> Reminder</ion-title>
+   
+    <ion-icon name="menu-outline" slot="end" routerLink="/tabs/tab1"></ion-icon>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 2</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content>
+  <div class="card" style="height: 550px;">
+    <div class="heading"></div>
+    <h1 style="text-align: center; font-size: 20px;"><strong>Add New Medicine</strong> </h1>
 
-  <app-explore-container name="Tab 2 page"></app-explore-container>
+    <ion-item style="margin-top: 10px;">
+      <ion-label position="floating"><strong> Medicine Name</strong> </ion-label>
+      <ion-icon name="person" slot="end" ></ion-icon>
+      <ion-input  [(ngModel)]="medicineName"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating"> <strong>Age</strong></ion-label>
+      <ion-icon name="man-outline" slot="end"></ion-icon>
+
+      <ion-input  [(ngModel)]="age"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating"> <strong>Dose</strong></ion-label>
+      <ion-icon name="toggle" slot="end" ></ion-icon>
+
+      <ion-input  [(ngModel)]="medicineDose"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating"> <strong>Start Day</strong></ion-label>
+
+      <ion-input type="date" displayFormat="DD" [(ngModel)]="medicineStartDay"></ion-input>
+
+
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating"> <strong>End Day</strong></ion-label>
+      <ion-input type="date" displayFormat="DDDD" [(ngModel)]="medicineEndDay"></ion-input>
+
+
+    </ion-item>
+
+
+    <ion-item>
+      <ion-label position="floating"> <strong>Time</strong></ion-label>
+      <ion-input type="time" displayFormat="DDDD" [(ngModel)]="medicineTime"></ion-input>
+
+
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating" > <strong>Color</strong></ion-label>
+      <ion-icon name="water" slot="end"></ion-icon>
+
+      <ion-input  [(ngModel)]="medicineColor"></ion-input>
+    </ion-item>
+
+      <ion-button type="submit" expand="block" fill="Color" style="color: white;"  (click)="submit()" routerLink="/tabs/tab1"> Add Schedule</ion-button>
+
+   
+  </div>
 </ion-content>
